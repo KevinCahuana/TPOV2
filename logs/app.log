@@ -494,3 +494,25 @@ java.lang.IllegalArgumentException: Records with more than one value cannot be c
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.25.jar:10.1.25]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-embed-core-10.1.25.jar:10.1.25]
 	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+2025-11-17 19:51:01.394 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 3800 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-17 19:51:01.401 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-17 19:51:01.403 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-17 19:51:03.673 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 2.608 seconds (process running for 3.711)
+2025-11-17 19:51:34.281 [http-nio-8080-exec-10] INFO  com.example.tpov2.service.GrafoService - [Prim] Iniciando algoritmo de Prim para encontrar el MST de ciudades.
+2025-11-17 19:51:34.686 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Ciudad inicial: Rosario. Añadiendo sus rutas a la cola de prioridad.
+2025-11-17 19:51:34.686 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Rosario -> Parana con distancia 150. Total MST: 1
+2025-11-17 19:51:34.686 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Parana -> Santa Fe con distancia 30. Total MST: 2
+2025-11-17 19:51:34.686 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Rosario -> Buenos Aires con distancia 300. Total MST: 3
+2025-11-17 19:51:34.686 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Buenos Aires -> La Plata con distancia 60. Total MST: 4
+2025-11-17 19:51:34.686 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: La Plata -> Mar del Plata con distancia 350. Total MST: 5
+2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Rosario -> Cordoba con distancia 400. Total MST: 6
+2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Cordoba -> Mendoza con distancia 450. Total MST: 7
+2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Mendoza -> Salta con distancia 500. Total MST: 8
+2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Salta -> Jujuy con distancia 120. Total MST: 9
+2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Jujuy -> Tucuman con distancia 200. Total MST: 10
+2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Mendoza -> Neuquen con distancia 520. Total MST: 11
+2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Parana -> Formosa con distancia 600. Total MST: 12
+2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Neuquen -> Bariloche con distancia 800. Total MST: 13
+2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Bariloche -> Ushuaia con distancia 1500. Total MST: 14
+2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Buenos Aires -> Madrid con distancia 10000. Total MST: 15
+2025-11-17 19:51:34.687 [http-nio-8080-exec-10] INFO  com.example.tpov2.service.GrafoService - [Prim] Algoritmo finalizado. MST contiene 15 rutas.

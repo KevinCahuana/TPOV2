@@ -24,36 +24,39 @@ public class GrafoService {
     @Autowired
     private CiudadRepository ciudadRepository;
 
-    // ... (métodos existentes de BFS, DFS, Dijkstra)
-
     public List<Ruta> encontrarArbolRecubrimientoMinimoPrim() {
         log.info("[Prim] Iniciando algoritmo de Prim para encontrar el MST de ciudades.");
-        List<Map<String, Object>> todasLasRutasMap = ciudadRepository.findAllRutas();
-        if (todasLasRutasMap.isEmpty()) {
+        List<Ruta> todasLasRutas = ciudadRepository.findAllRutas();
+        if (todasLasRutas.isEmpty()) {
             return Collections.emptyList();
         }
 
-        // Construir una lista de adyacencia
+        // Construir una lista de adyacencia a partir de la lista de rutas únicas
         Map<String, List<Ruta>> adj = new HashMap<>();
-        for (Map<String, Object> rutaMap : todasLasRutasMap) {
-            String origen = (String) rutaMap.get("origen");
-            String destino = (String) rutaMap.get("destino");
-            int distancia = ((Number) rutaMap.get("distancia")).intValue();
-            adj.computeIfAbsent(origen, k -> new ArrayList<>()).add(new Ruta(origen, destino, distancia));
-            adj.computeIfAbsent(destino, k -> new ArrayList<>()).add(new Ruta(destino, origen, distancia));
+        Set<String> allCities = new HashSet<>();
+        for (Ruta ruta : todasLasRutas) {
+            adj.computeIfAbsent(ruta.getOrigen(), k -> new ArrayList<>()).add(ruta);
+            adj.computeIfAbsent(ruta.getDestino(), k -> new ArrayList<>()).add(new Ruta(ruta.getDestino(), ruta.getOrigen(), ruta.getDistancia()));
+            allCities.add(ruta.getOrigen());
+            allCities.add(ruta.getDestino());
         }
 
         List<Ruta> mst = new ArrayList<>();
         PriorityQueue<Ruta> pq = new PriorityQueue<>(Comparator.comparingInt(Ruta::getDistancia));
         Set<String> visitados = new HashSet<>();
 
-        // Empezar desde una ciudad arbitraria
-        String ciudadInicial = adj.keySet().iterator().next();
+        if (allCities.isEmpty()) {
+            return Collections.emptyList();
+        }
+        
+        String ciudadInicial = allCities.iterator().next();
         visitados.add(ciudadInicial);
-        pq.addAll(adj.get(ciudadInicial));
+        if (adj.containsKey(ciudadInicial)) {
+            pq.addAll(adj.get(ciudadInicial));
+        }
         log.debug("[Prim] Ciudad inicial: {}. Añadiendo sus rutas a la cola de prioridad.", ciudadInicial);
 
-        while (!pq.isEmpty() && visitados.size() < adj.size()) {
+        while (!pq.isEmpty() && visitados.size() < allCities.size()) {
             Ruta rutaActual = pq.poll();
             String destino = rutaActual.getDestino();
 
@@ -65,9 +68,11 @@ public class GrafoService {
             mst.add(rutaActual);
             log.debug("[Prim] Seleccionada ruta: {} -> {} con distancia {}. Total MST: {}", rutaActual.getOrigen(), destino, rutaActual.getDistancia(), mst.size());
 
-            for (Ruta nuevaRuta : adj.get(destino)) {
-                if (!visitados.contains(nuevaRuta.getDestino())) {
-                    pq.add(nuevaRuta);
+            if (adj.containsKey(destino)) {
+                for (Ruta nuevaRuta : adj.get(destino)) {
+                    if (!visitados.contains(nuevaRuta.getDestino())) {
+                        pq.add(nuevaRuta);
+                    }
                 }
             }
         }
@@ -77,19 +82,24 @@ public class GrafoService {
 
     public List<Ruta> encontrarArbolRecubrimientoMinimoKruskal() {
         log.info("[Kruskal] Iniciando algoritmo de Kruskal para encontrar el MST de ciudades.");
-        List<Map<String, Object>> todasLasRutasMap = ciudadRepository.findAllRutas();
-        if (todasLasRutasMap.isEmpty()) {
+        List<Ruta> todasLasRutas = ciudadRepository.findAllRutas();
+        if (todasLasRutas.isEmpty()) {
             return Collections.emptyList();
         }
 
-        List<Ruta> todasLasRutas = todasLasRutasMap.stream()
-                .map(map -> new Ruta((String) map.get("origen"), (String) map.get("destino"), ((Number) map.get("distancia")).intValue()))
-                .sorted(Comparator.comparingInt(Ruta::getDistancia))
-                .collect(Collectors.toList());
+        // Kruskal necesita las aristas ordenadas por peso. La consulta ya nos da una lista única.
+        todasLasRutas.sort(Comparator.comparingInt(Ruta::getDistancia));
 
         List<Ruta> mst = new ArrayList<>();
         Map<String, String> parent = new HashMap<>();
-        ciudadRepository.findAll().forEach(ciudad -> parent.put(ciudad.getNombre(), ciudad.getNombre()));
+        
+        // Inicializar el conjunto disjunto (Union-Find) con todas las ciudades únicas
+        Set<String> allCities = new HashSet<>();
+        todasLasRutas.forEach(ruta -> {
+            allCities.add(ruta.getOrigen());
+            allCities.add(ruta.getDestino());
+        });
+        allCities.forEach(ciudad -> parent.put(ciudad, ciudad));
 
         for (Ruta ruta : todasLasRutas) {
             String root1 = find(parent, ruta.getOrigen());
@@ -110,7 +120,10 @@ public class GrafoService {
         if (parent.get(i).equals(i)) {
             return i;
         }
-        return find(parent, parent.get(i));
+        // Path compression
+        String root = find(parent, parent.get(i));
+        parent.put(i, root);
+        return root;
     }
 
     private void union(Map<String, String> parent, String x, String y) {
