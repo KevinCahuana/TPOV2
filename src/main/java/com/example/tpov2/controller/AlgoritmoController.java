@@ -1,5 +1,6 @@
 package com.example.tpov2.controller;
 
+import com.example.tpov2.model.Ruta;
 import com.example.tpov2.model.Usuario;
 import com.example.tpov2.service.GrafoService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -19,13 +20,37 @@ import java.util.List;
 @RequestMapping("/algoritmos")
 @Tag(
         name = "Algoritmos de Grafos",
-        description = "Endpoints para ejecutar algoritmos de grafos sobre la red de usuarios"
+        description = "Endpoints para ejecutar algoritmos de grafos sobre la red de usuarios y ciudades"
 )
 public class AlgoritmoController {
 
     @Autowired
     private GrafoService grafoService;
 
+    // ... (endpoints existentes de BFS, DFS, Dijkstra)
+
+    @Operation(
+            summary = "Árbol de Recubrimiento Mínimo (MST) con Prim",
+            description = "Calcula el Árbol de Recubrimiento Mínimo del grafo de ciudades utilizando el algoritmo de Prim. " +
+                    "Este algoritmo es ideal para grafos densos y encuentra la red de rutas de menor coste total que conecta todas las ciudades."
+    )
+    @ApiResponse(responseCode = "200", description = "MST encontrado exitosamente", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Ruta.class)))
+    @GetMapping("/prim/mst")
+    public ResponseEntity<List<Ruta>> getMstPrim() {
+        return ResponseEntity.ok(grafoService.encontrarArbolRecubrimientoMinimoPrim());
+    }
+
+    @Operation(
+            summary = "Árbol de Recubrimiento Mínimo (MST) con Kruskal",
+            description = "Calcula el Árbol de Recubrimiento Mínimo del grafo de ciudades utilizando el algoritmo de Kruskal. " +
+                    "Este algoritmo es eficiente en grafos dispersos y, al igual que Prim, encuentra la red de rutas de menor coste total."
+    )
+    @ApiResponse(responseCode = "200", description = "MST encontrado exitosamente", content = @Content(mediaType = "application/json", schema = @Schema(implementation = Ruta.class)))
+    @GetMapping("/kruskal/mst")
+    public ResponseEntity<List<Ruta>> getMstKruskal() {
+        return ResponseEntity.ok(grafoService.encontrarArbolRecubrimientoMinimoKruskal());
+    }
+    
     @Operation(
             summary = "Búsqueda en anchura (BFS)",
             description = "Encuentra todos los usuarios alcanzables desde un usuario inicial utilizando el algoritmo " +

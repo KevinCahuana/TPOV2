@@ -1,7 +1,9 @@
 package com.example.tpov2.service;
 
 import com.example.tpov2.model.AmigoConPeso;
+import com.example.tpov2.model.Ruta;
 import com.example.tpov2.model.Usuario;
+import com.example.tpov2.repository.CiudadRepository;
 import com.example.tpov2.repository.UsuarioRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +21,107 @@ public class GrafoService {
     @Autowired
     private UsuarioRepository usuarioRepository;
 
+    @Autowired
+    private CiudadRepository ciudadRepository;
+
+    // ... (métodos existentes de BFS, DFS, Dijkstra)
+
+    public List<Ruta> encontrarArbolRecubrimientoMinimoPrim() {
+        log.info("[Prim] Iniciando algoritmo de Prim para encontrar el MST de ciudades.");
+        List<Map<String, Object>> todasLasRutasMap = ciudadRepository.findAllRutas();
+        if (todasLasRutasMap.isEmpty()) {
+            return Collections.emptyList();
+        }
+
+        // Construir una lista de adyacencia
+        Map<String, List<Ruta>> adj = new HashMap<>();
+        for (Map<String, Object> rutaMap : todasLasRutasMap) {
+            String origen = (String) rutaMap.get("origen");
+            String destino = (String) rutaMap.get("destino");
+            int distancia = ((Number) rutaMap.get("distancia")).intValue();
+            adj.computeIfAbsent(origen, k -> new ArrayList<>()).add(new Ruta(origen, destino, distancia));
+            adj.computeIfAbsent(destino, k -> new ArrayList<>()).add(new Ruta(destino, origen, distancia));
+        }
+
+        List<Ruta> mst = new ArrayList<>();
+        PriorityQueue<Ruta> pq = new PriorityQueue<>(Comparator.comparingInt(Ruta::getDistancia));
+        Set<String> visitados = new HashSet<>();
+
+        // Empezar desde una ciudad arbitraria
+        String ciudadInicial = adj.keySet().iterator().next();
+        visitados.add(ciudadInicial);
+        pq.addAll(adj.get(ciudadInicial));
+        log.debug("[Prim] Ciudad inicial: {}. Añadiendo sus rutas a la cola de prioridad.", ciudadInicial);
+
+        while (!pq.isEmpty() && visitados.size() < adj.size()) {
+            Ruta rutaActual = pq.poll();
+            String destino = rutaActual.getDestino();
+
+            if (visitados.contains(destino)) {
+                continue;
+            }
+
+            visitados.add(destino);
+            mst.add(rutaActual);
+            log.debug("[Prim] Seleccionada ruta: {} -> {} con distancia {}. Total MST: {}", rutaActual.getOrigen(), destino, rutaActual.getDistancia(), mst.size());
+
+            for (Ruta nuevaRuta : adj.get(destino)) {
+                if (!visitados.contains(nuevaRuta.getDestino())) {
+                    pq.add(nuevaRuta);
+                }
+            }
+        }
+        log.info("[Prim] Algoritmo finalizado. MST contiene {} rutas.", mst.size());
+        return mst;
+    }
+
+    public List<Ruta> encontrarArbolRecubrimientoMinimoKruskal() {
+        log.info("[Kruskal] Iniciando algoritmo de Kruskal para encontrar el MST de ciudades.");
+        List<Map<String, Object>> todasLasRutasMap = ciudadRepository.findAllRutas();
+        if (todasLasRutasMap.isEmpty()) {
+            return Collections.emptyList();
+        }
+
+        List<Ruta> todasLasRutas = todasLasRutasMap.stream()
+                .map(map -> new Ruta((String) map.get("origen"), (String) map.get("destino"), ((Number) map.get("distancia")).intValue()))
+                .sorted(Comparator.comparingInt(Ruta::getDistancia))
+                .collect(Collectors.toList());
+
+        List<Ruta> mst = new ArrayList<>();
+        Map<String, String> parent = new HashMap<>();
+        ciudadRepository.findAll().forEach(ciudad -> parent.put(ciudad.getNombre(), ciudad.getNombre()));
+
+        for (Ruta ruta : todasLasRutas) {
+            String root1 = find(parent, ruta.getOrigen());
+            String root2 = find(parent, ruta.getDestino());
+
+            if (!root1.equals(root2)) {
+                mst.add(ruta);
+                union(parent, root1, root2);
+                log.debug("[Kruskal] Añadida ruta: {} -> {} con distancia {}. Total MST: {}", ruta.getOrigen(), ruta.getDestino(), ruta.getDistancia(), mst.size());
+            }
+        }
+        log.info("[Kruskal] Algoritmo finalizado. MST contiene {} rutas.", mst.size());
+        return mst;
+    }
+
+    // Métodos auxiliares para Kruskal (Union-Find)
+    private String find(Map<String, String> parent, String i) {
+        if (parent.get(i).equals(i)) {
+            return i;
+        }
+        return find(parent, parent.get(i));
+    }
+
+    private void union(Map<String, String> parent, String x, String y) {
+        String rootX = find(parent, x);
+        String rootY = find(parent, y);
+        if (!rootX.equals(rootY)) {
+            parent.put(rootX, rootY);
+        }
+    }
+    
+    // ... (métodos existentes de BFS, DFS, Dijkstra)
     public List<Usuario> encontrarAlcanzablesBfs(String userId) {
         log.info("[BFS] Iniciando desde el usuario: {}", userId);
         if (!usuarioRepository.existsById(userId)) {
