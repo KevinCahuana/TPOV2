@@ -1,0 +1,156 @@
+2025-11-16 23:54:37.510 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 8980 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-16 23:54:37.517 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 23:54:39.434 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 2.216 seconds (process running for 2.984)
+2025-11-16 23:57:03.700 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 8980 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-16 23:57:03.704 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-16 23:57:04.290 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 0.634 seconds (process running for 147.844)
+2025-11-16 23:57:22.274 [http-nio-8080-exec-1] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot read field "value" because "anotherInteger" is null] with root cause
+java.lang.NullPointerException: Cannot read field "value" because "anotherInteger" is null
+	at java.base/java.lang.Integer.compareTo(Integer.java:1477) ~[?:?]
+	at java.base/java.lang.Integer.compareTo(Integer.java:71) ~[?:?]
+	at java.base/java.util.Comparator.lambda$comparing$77a9974f$1(Comparator.java:473) ~[?:?]
+	at com.example.tpov2.service.OrdenamientoService.partition(OrdenamientoService.java:66) ~[classes/:?]
+	at com.example.tpov2.service.OrdenamientoService.quickSort(OrdenamientoService.java:55) ~[classes/:?]
+	at com.example.tpov2.service.OrdenamientoService.ordenarUsuarios(OrdenamientoService.java:30) ~[classes/:?]
+	at com.example.tpov2.controller.OrdenamientoController.ordenarUsuarios(OrdenamientoController.java:61) ~[classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+2025-11-17 00:06:07.711 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 27656 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-17 00:06:07.718 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-17 00:06:09.515 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 2.058 seconds (process running for 2.847)
+2025-11-17 00:06:26.745 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.OrdenamientoService - [Quicksort] Ordenando 18 usuarios por 'nombre'.
+2025-11-17 00:06:26.747 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.OrdenamientoService - [Quicksort] Ordenamiento completado.
+2025-11-17 00:50:35.647 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 25592 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-17 00:50:35.652 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-17 00:50:35.652 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-17 00:50:37.332 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 1.912 seconds (process running for 2.546)
+2025-11-17 00:50:49.270 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.OrdenamientoService - [Quicksort] Ordenando 18 usuarios por 'nombre'.
+2025-11-17 00:50:49.271 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Ignacio (en índice 17)
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Ana <-> Ana
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Bruno <-> Bruno
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Carla <-> Carla
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Daniel <-> Daniel
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Elena <-> Elena
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Fabian <-> Fabian
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Gabriela <-> Gabriela
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Hector <-> Hector
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 8
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 8. Sub-lista izquierda: [0 a 7], Sub-lista derecha: [9 a 17]
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Hector (en índice 7)
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Ana <-> Ana
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Bruno <-> Bruno
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Carla <-> Carla
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Daniel <-> Daniel
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Elena <-> Elena
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Fabian <-> Fabian
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Gabriela <-> Gabriela
+2025-11-17 00:50:49.272 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 7
+2025-11-17 00:50:49.273 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 7. Sub-lista izquierda: [0 a 6], Sub-lista derecha: [8 a 7]
+2025-11-17 00:50:49.273 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Gabriela (en índice 6)
+2025-11-17 00:50:49.273 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Ana <-> Ana
+2025-11-17 00:50:49.273 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Bruno <-> Bruno
+2025-11-17 00:50:49.273 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Carla <-> Carla
+2025-11-17 00:50:49.273 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Daniel <-> Daniel
+2025-11-17 00:50:49.273 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Elena <-> Elena
+2025-11-17 00:50:49.273 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Fabian <-> Fabian
+2025-11-17 00:50:49.291 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 6
+2025-11-17 00:50:49.291 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 6. Sub-lista izquierda: [0 a 5], Sub-lista derecha: [7 a 6]
+2025-11-17 00:50:49.291 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Fabian (en índice 5)
+2025-11-17 00:50:49.291 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Ana <-> Ana
+2025-11-17 00:50:49.292 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Bruno <-> Bruno
+2025-11-17 00:50:49.292 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Carla <-> Carla
+2025-11-17 00:50:49.292 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Daniel <-> Daniel
+2025-11-17 00:50:49.292 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Elena <-> Elena
+2025-11-17 00:50:49.292 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 5
+2025-11-17 00:50:49.292 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 5. Sub-lista izquierda: [0 a 4], Sub-lista derecha: [6 a 5]
+2025-11-17 00:50:49.292 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Elena (en índice 4)
+2025-11-17 00:50:49.292 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Ana <-> Ana
+2025-11-17 00:50:49.292 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Bruno <-> Bruno
+2025-11-17 00:50:49.292 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Carla <-> Carla
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Daniel <-> Daniel
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 4
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 4. Sub-lista izquierda: [0 a 3], Sub-lista derecha: [5 a 4]
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Daniel (en índice 3)
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Ana <-> Ana
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Bruno <-> Bruno
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Carla <-> Carla
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 3
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 3. Sub-lista izquierda: [0 a 2], Sub-lista derecha: [4 a 3]
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Carla (en índice 2)
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Ana <-> Ana
+2025-11-17 00:50:49.293 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Bruno <-> Bruno
+2025-11-17 00:50:49.294 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 2
+2025-11-17 00:50:49.294 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 2. Sub-lista izquierda: [0 a 1], Sub-lista derecha: [3 a 2]
+2025-11-17 00:50:49.294 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Bruno (en índice 1)
+2025-11-17 00:50:49.294 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Ana <-> Ana
+2025-11-17 00:50:49.294 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 1
+2025-11-17 00:50:49.294 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 1. Sub-lista izquierda: [0 a 0], Sub-lista derecha: [2 a 1]
+2025-11-17 00:50:49.294 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Iris (en índice 17)
+2025-11-17 00:50:49.294 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 9
+2025-11-17 00:50:49.294 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 9. Sub-lista izquierda: [9 a 8], Sub-lista derecha: [10 a 17]
+2025-11-17 00:50:49.294 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Juan (en índice 17)
+2025-11-17 00:50:49.294 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 10
+2025-11-17 00:50:49.295 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 10. Sub-lista izquierda: [10 a 9], Sub-lista derecha: [11 a 17]
+2025-11-17 00:50:49.295 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Lucas (en índice 17)
+2025-11-17 00:50:49.295 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 11
+2025-11-17 00:50:49.295 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 11. Sub-lista izquierda: [11 a 10], Sub-lista derecha: [12 a 17]
+2025-11-17 00:50:49.295 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Marina (en índice 17)
+2025-11-17 00:50:49.295 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 12
+2025-11-17 00:50:49.295 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 12. Sub-lista izquierda: [12 a 11], Sub-lista derecha: [13 a 17]
+2025-11-17 00:50:49.295 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Ricardo (en índice 17)
+2025-11-17 00:50:49.295 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Sofia <-> Pablo
+2025-11-17 00:50:49.296 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 14
+2025-11-17 00:50:49.296 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 14. Sub-lista izquierda: [13 a 13], Sub-lista derecha: [15 a 17]
+2025-11-17 00:50:49.296 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote elegido: Tomas (en índice 17)
+2025-11-17 00:50:49.296 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Intercambio: Sofia <-> Sofia
+2025-11-17 00:50:49.296 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Pivote movido a la posición final de partición: 16
+2025-11-17 00:50:49.296 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.OrdenamientoService - [Quicksort] Partición en índice 16. Sub-lista izquierda: [15 a 15], Sub-lista derecha: [17 a 17]
+2025-11-17 00:50:49.296 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.OrdenamientoService - [Quicksort] Ordenamiento completado.
