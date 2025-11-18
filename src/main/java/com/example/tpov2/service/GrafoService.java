@@ -24,6 +24,54 @@ public class GrafoService {
     @Autowired
     private CiudadRepository ciudadRepository;
 
+    public List<Usuario> encontrarAlcanzablesBfs(String userId) {
+        log.info("[BFS] Iniciando desde el usuario: {}", userId);
+        if (!usuarioRepository.existsById(userId)) {
+            throw new IllegalArgumentException("El usuario con ID '" + userId + "' no fue encontrado.");
+        }
+
+        Queue<String> cola = new LinkedList<>();
+        Set<String> visitados = new HashSet<>();
+
+        cola.add(userId);
+        visitados.add(userId);
+
+        while (!cola.isEmpty()) {
+            String idActual = cola.poll();
+            log.debug("[BFS] Visitando (sacando de la cola): {}", idActual);
+
+            List<Usuario> amigos = usuarioRepository.findAmigosByUserId(idActual);
+            for (Usuario amigo : amigos) {
+                log.debug("[BFS] Analizando amigo: {}. Visitado: {}", amigo.getUserId(), visitados.contains(amigo.getUserId()));
+                if (visitados.add(amigo.getUserId())) {
+                    log.debug("[BFS] Agregando a la cola: {}", amigo.getUserId());
+                    cola.add(amigo.getUserId());
+                }
+            }
+        }
+
+        log.info("[BFS] Finalizado. Nodos alcanzables: {}", visitados.size());
+        List<Usuario> resultado = new ArrayList<>();
+        usuarioRepository.findAllById(visitados).forEach(resultado::add);
+        return resultado;
+    }
+
+    public List<Usuario> encontrarAlcanzablesDfs(String userId) {
+        log.info("[DFS] Iniciando desde el usuario: {}", userId);
+        if (!usuarioRepository.existsById(userId)) {
+            throw new IllegalArgumentException("El usuario con ID '" + userId + "' no fue encontrado.");
+        }
+
+        Set<String> visitados = new HashSet<>();
+        List<Usuario> resultado = new ArrayList<>();
+        dfsRecursivo(userId, visitados, resultado);
+
+        log.info("[DFS] Finalizado. Nodos alcanzables: {}", resultado.size());
+        return resultado;
+    }
+
+    // ... (resto de los métodos sin cambios)
+    
     public List<Ruta> encontrarArbolRecubrimientoMinimoPrim() {
         log.info("[Prim] Iniciando algoritmo de Prim para encontrar el MST de ciudades.");
         List<Ruta> todasLasRutas = ciudadRepository.findAllRutas();
@@ -115,12 +163,10 @@ public class GrafoService {
         return mst;
     }
 
-    // Métodos auxiliares para Kruskal (Union-Find)
     private String find(Map<String, String> parent, String i) {
         if (parent.get(i).equals(i)) {
             return i;
         }
-        // Path compression
         String root = find(parent, parent.get(i));
         parent.put(i, root);
         return root;
@@ -134,55 +180,6 @@ public class GrafoService {
         }
     }
     
-    // ... (métodos existentes de BFS, DFS, Dijkstra)
-    public List<Usuario> encontrarAlcanzablesBfs(String userId) {
-        log.info("[BFS] Iniciando desde el usuario: {}", userId);
-        if (!usuarioRepository.existsById(userId)) {
-            log.warn("[BFS] El usuario inicial {} no existe.", userId);
-            return Collections.emptyList();
-        }
-
-        Queue<String> cola = new LinkedList<>();
-        Set<String> visitados = new HashSet<>();
-
-        cola.add(userId);
-        visitados.add(userId);
-
-        while (!cola.isEmpty()) {
-            String idActual = cola.poll();
-            log.debug("[BFS] Visitando (sacando de la cola): {}", idActual);
-
-            List<Usuario> amigos = usuarioRepository.findAmigosByUserId(idActual);
-            for (Usuario amigo : amigos) {
-                log.debug("[BFS] Analizando amigo: {}. Visitado: {}", amigo.getUserId(), visitados.contains(amigo.getUserId()));
-                if (visitados.add(amigo.getUserId())) {
-                    log.debug("[BFS] Agregando a la cola: {}", amigo.getUserId());
-                    cola.add(amigo.getUserId());
-                }
-            }
-        }
-
-        log.info("[BFS] Finalizado. Nodos alcanzables: {}", visitados.size());
-        List<Usuario> resultado = new ArrayList<>();
-        usuarioRepository.findAllById(visitados).forEach(resultado::add);
-        return resultado;
-    }
-
-    public List<Usuario> encontrarAlcanzablesDfs(String userId) {
-        log.info("[DFS] Iniciando desde el usuario: {}", userId);
-        if (!usuarioRepository.existsById(userId)) {
-            log.warn("[DFS] El usuario inicial {} no existe.", userId);
-            return Collections.emptyList();
-        }
-
-        Set<String> visitados = new HashSet<>();
-        List<Usuario> resultado = new ArrayList<>();
-        dfsRecursivo(userId, visitados, resultado);
-
-        log.info("[DFS] Finalizado. Nodos alcanzables: {}", resultado.size());
-        return resultado;
-    }
-
     private void dfsRecursivo(String idActual, Set<String> visitados, List<Usuario> resultado) {
         log.debug("[DFS] Visitando recursivamente: {}", idActual);
         visitados.add(idActual);
@@ -199,6 +196,10 @@ public class GrafoService {
 
     public List<Usuario> encontrarCaminoMinimoDijkstra(String origenId, String destinoId) {
         log.info("[Dijkstra] Iniciando desde {} hasta {}", origenId, destinoId);
+        
+        if (!usuarioRepository.existsById(origenId) || !usuarioRepository.existsById(destinoId)) {
+            throw new IllegalArgumentException("El usuario de origen o destino no fue encontrado.");
+        }
 
         Map<String, Integer> distancias = new HashMap<>();
         Map<String, String> predecesores = new HashMap<>();
@@ -223,7 +224,7 @@ public class GrafoService {
             log.debug("[Dijkstra] PQ poll: Visitando {} con costo {}", idActual, costoActual);
 
             if (idActual.equals(destinoId)) {
-                break; // Encontramos el destino
+                break; 
             }
 
             List<AmigoConPeso> vecinos = usuarioRepository.findAmigosConPesoByUserId(idActual);
@@ -253,7 +254,6 @@ public class GrafoService {
 
         log.info("[Dijkstra] Camino más corto encontrado para {}. Costo total: {}", destinoId, distanciaFinal);
 
-        // Reconstruir camino
         LinkedList<String> idsDelCamino = new LinkedList<>();
         String pasoActual = destinoId;
         while (pasoActual != null) {
