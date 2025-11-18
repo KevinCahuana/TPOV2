@@ -19,11 +19,11 @@ public interface UsuarioRepository extends Neo4jRepository<Usuario, String> {
 
     Optional<Usuario> findByUserId(String userId);
 
-    @Query("MATCH (u:Usuario {userId: $userId})-[:ES_AMIGO_DE]-(amigo:Usuario) RETURN amigo")
+    @Query("MATCH (u:Usuario {userId: $userId})-[:ES_AMIGO_DE]-(amigo:Usuario) RETURN DISTINCT amigo")
     List<Usuario> findAmigosByUserId(@Param("userId") String userId);
 
     @Query("MATCH (u:Usuario {userId: $userId})-[r:ES_AMIGO_DE]-(amigo:Usuario) " +
-            "RETURN amigo AS amigo, r.peso AS peso")
+           "RETURN amigo AS amigo, head(collect(r.peso)) AS peso")
     List<AmigoConPeso> findAmigosConPesoByUserId(@Param("userId") String userId);
 
     @Query("MATCH (u:Usuario {userId: $userId})-[r:ES_AMIGO_DE]-(amigo:Usuario) " +
