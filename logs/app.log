@@ -516,3 +516,434 @@ java.lang.IllegalArgumentException: Records with more than one value cannot be c
 2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Bariloche -> Ushuaia con distancia 1500. Total MST: 14
 2025-11-17 19:51:34.687 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GrafoService - [Prim] Seleccionada ruta: Buenos Aires -> Madrid con distancia 10000. Total MST: 15
 2025-11-17 19:51:34.687 [http-nio-8080-exec-10] INFO  com.example.tpov2.service.GrafoService - [Prim] Algoritmo finalizado. MST contiene 15 rutas.
+2025-11-17 20:38:23.271 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 21684 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-17 20:38:23.275 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-17 20:38:23.276 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-17 20:38:24.989 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 1.963 seconds (process running for 2.707)
+2025-11-17 20:40:00.800 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-17 20:40:01.380 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: [null]
+2025-11-17 20:40:01.450 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 1 ([null])
+2025-11-17 20:40:01.450 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 1 intereses en común.
+2025-11-17 20:40:01.464 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 1 ([null])
+2025-11-17 20:40:01.478 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 1 ([null])
+2025-11-17 20:40:01.491 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 1 ([null])
+2025-11-17 20:40:01.508 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 1 ([null])
+2025-11-17 20:40:01.520 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 1 ([null])
+2025-11-17 20:40:01.529 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t1. Intereses en común: 0 ([])
+2025-11-17 20:40:01.543 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t2. Intereses en común: 0 ([])
+2025-11-17 20:40:01.556 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t3. Intereses en común: 0 ([])
+2025-11-17 20:40:01.580 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t4. Intereses en común: 0 ([])
+2025-11-17 20:40:01.589 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t5. Intereses en común: 0 ([])
+2025-11-17 20:40:01.598 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t6. Intereses en común: 0 ([])
+2025-11-17 20:40:01.608 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t7. Intereses en común: 0 ([])
+2025-11-17 20:40:01.617 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t8. Intereses en común: 0 ([])
+2025-11-17 20:40:01.618 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: u4
+2025-11-17 20:47:48.619 [http-nio-8080-exec-9] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: t8
+2025-11-17 20:47:48.657 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de t8: []
+2025-11-17 20:47:48.681 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u1. Intereses en común: 0 ([])
+2025-11-17 20:47:48.682 [http-nio-8080-exec-9] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u1 con 0 intereses en común.
+2025-11-17 20:47:48.688 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u2. Intereses en común: 0 ([])
+2025-11-17 20:47:48.695 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u3. Intereses en común: 0 ([])
+2025-11-17 20:47:48.702 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-17 20:47:48.707 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-17 20:47:48.712 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-17 20:47:48.719 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-17 20:47:48.727 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-17 20:47:48.733 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-17 20:47:48.741 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 0 ([])
+2025-11-17 20:47:48.747 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t1. Intereses en común: 0 ([])
+2025-11-17 20:47:48.754 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t2. Intereses en común: 0 ([])
+2025-11-17 20:47:48.760 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t3. Intereses en común: 0 ([])
+2025-11-17 20:47:48.769 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t4. Intereses en común: 0 ([])
+2025-11-17 20:47:48.777 [http-nio-8080-exec-9] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t5. Intereses en común: 0 ([])
+2025-11-17 20:47:48.777 [http-nio-8080-exec-9] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: u1
+2025-11-17 20:47:56.829 [http-nio-8080-exec-10] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u2
+2025-11-17 20:47:56.857 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u2: [null]
+2025-11-17 20:47:56.874 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u3. Intereses en común: 1 ([null])
+2025-11-17 20:47:56.874 [http-nio-8080-exec-10] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u3 con 1 intereses en común.
+2025-11-17 20:47:56.883 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 1 ([null])
+2025-11-17 20:47:56.891 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 1 ([null])
+2025-11-17 20:47:56.899 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 1 ([null])
+2025-11-17 20:47:56.907 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 1 ([null])
+2025-11-17 20:47:56.913 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 1 ([null])
+2025-11-17 20:47:56.921 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 1 ([null])
+2025-11-17 20:47:56.927 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t1. Intereses en común: 0 ([])
+2025-11-17 20:47:56.933 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t2. Intereses en común: 0 ([])
+2025-11-17 20:47:56.939 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t3. Intereses en común: 0 ([])
+2025-11-17 20:47:56.945 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t4. Intereses en común: 0 ([])
+2025-11-17 20:47:56.952 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t5. Intereses en común: 0 ([])
+2025-11-17 20:47:56.962 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t6. Intereses en común: 0 ([])
+2025-11-17 20:47:56.970 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t7. Intereses en común: 0 ([])
+2025-11-17 20:47:56.978 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t8. Intereses en común: 0 ([])
+2025-11-17 20:47:56.979 [http-nio-8080-exec-10] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: u3
+2025-11-17 21:04:22.897 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 21684 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-17 21:04:22.897 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-17 21:04:22.897 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-17 21:04:23.318 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 0.454 seconds (process running for 1561.113)
+2025-11-17 21:04:44.563 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 29028 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-17 21:04:44.570 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-17 21:04:44.571 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-17 21:04:46.312 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 1.985 seconds (process running for 2.731)
+2025-11-17 21:05:03.533 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u2
+2025-11-17 21:05:04.031 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u2: [null]
+2025-11-17 21:05:04.084 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u3. Intereses en común: 1 ([null])
+2025-11-17 21:05:04.085 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u3 con 1 intereses en común.
+2025-11-17 21:05:04.103 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 1 ([null])
+2025-11-17 21:05:04.119 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 1 ([null])
+2025-11-17 21:05:04.135 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 1 ([null])
+2025-11-17 21:05:04.152 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 1 ([null])
+2025-11-17 21:05:04.163 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 1 ([null])
+2025-11-17 21:05:04.174 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 1 ([null])
+2025-11-17 21:05:04.190 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t1. Intereses en común: 0 ([])
+2025-11-17 21:05:04.206 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t2. Intereses en común: 0 ([])
+2025-11-17 21:05:04.217 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t3. Intereses en común: 0 ([])
+2025-11-17 21:05:04.229 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t4. Intereses en común: 0 ([])
+2025-11-17 21:05:04.242 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t5. Intereses en común: 0 ([])
+2025-11-17 21:05:04.254 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t6. Intereses en común: 0 ([])
+2025-11-17 21:05:04.271 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t7. Intereses en común: 0 ([])
+2025-11-17 21:05:04.282 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t8. Intereses en común: 0 ([])
+2025-11-17 21:05:04.283 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u3', nombre='Carla', edad=22}, interesesEnComun=[null]}
+2025-11-17 21:05:12.515 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-17 21:05:12.544 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: [null]
+2025-11-17 21:05:12.563 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 1 ([null])
+2025-11-17 21:05:12.564 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 1 intereses en común.
+2025-11-17 21:05:12.572 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 1 ([null])
+2025-11-17 21:05:12.580 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 1 ([null])
+2025-11-17 21:05:12.588 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 1 ([null])
+2025-11-17 21:05:12.594 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 1 ([null])
+2025-11-17 21:05:12.602 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 1 ([null])
+2025-11-17 21:05:12.608 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t1. Intereses en común: 0 ([])
+2025-11-17 21:05:12.616 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t2. Intereses en común: 0 ([])
+2025-11-17 21:05:12.623 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t3. Intereses en común: 0 ([])
+2025-11-17 21:05:12.630 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t4. Intereses en común: 0 ([])
+2025-11-17 21:05:12.638 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t5. Intereses en común: 0 ([])
+2025-11-17 21:05:12.647 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t6. Intereses en común: 0 ([])
+2025-11-17 21:05:12.656 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t7. Intereses en común: 0 ([])
+2025-11-17 21:05:12.664 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t8. Intereses en común: 0 ([])
+2025-11-17 21:05:12.664 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel', edad=41}, interesesEnComun=[null]}
+2025-11-17 21:05:16.787 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u3
+2025-11-17 21:05:16.815 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u3: [null]
+2025-11-17 21:05:16.836 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u2. Intereses en común: 1 ([null])
+2025-11-17 21:05:16.837 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u2 con 1 intereses en común.
+2025-11-17 21:05:16.845 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 1 ([null])
+2025-11-17 21:05:16.852 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 1 ([null])
+2025-11-17 21:05:16.859 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 1 ([null])
+2025-11-17 21:05:16.866 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 1 ([null])
+2025-11-17 21:05:16.872 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 1 ([null])
+2025-11-17 21:05:16.878 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t1. Intereses en común: 0 ([])
+2025-11-17 21:05:16.887 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t2. Intereses en común: 0 ([])
+2025-11-17 21:05:16.893 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t3. Intereses en común: 0 ([])
+2025-11-17 21:05:16.900 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t4. Intereses en común: 0 ([])
+2025-11-17 21:05:16.906 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t5. Intereses en común: 0 ([])
+2025-11-17 21:05:16.911 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t6. Intereses en común: 0 ([])
+2025-11-17 21:05:16.918 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t7. Intereses en común: 0 ([])
+2025-11-17 21:05:16.926 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t8. Intereses en común: 0 ([])
+2025-11-17 21:05:16.926 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u2', nombre='Bruno', edad=35}, interesesEnComun=[null]}
+2025-11-17 21:05:23.410 [http-nio-8080-exec-4] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u4
+2025-11-17 21:05:23.439 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u4: [null]
+2025-11-17 21:05:23.460 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u1. Intereses en común: 1 ([null])
+2025-11-17 21:05:23.461 [http-nio-8080-exec-4] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u1 con 1 intereses en común.
+2025-11-17 21:05:23.470 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 1 ([null])
+2025-11-17 21:05:23.478 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 1 ([null])
+2025-11-17 21:05:23.485 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 1 ([null])
+2025-11-17 21:05:23.493 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 1 ([null])
+2025-11-17 21:05:23.500 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 1 ([null])
+2025-11-17 21:05:23.507 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 1 ([null])
+2025-11-17 21:05:23.514 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t1. Intereses en común: 0 ([])
+2025-11-17 21:05:23.521 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t2. Intereses en común: 0 ([])
+2025-11-17 21:05:23.527 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t3. Intereses en común: 0 ([])
+2025-11-17 21:05:23.532 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t4. Intereses en común: 0 ([])
+2025-11-17 21:05:23.537 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t5. Intereses en común: 0 ([])
+2025-11-17 21:05:23.543 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t6. Intereses en común: 0 ([])
+2025-11-17 21:05:23.551 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t7. Intereses en común: 0 ([])
+2025-11-17 21:05:23.559 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t8. Intereses en común: 0 ([])
+2025-11-17 21:05:23.559 [http-nio-8080-exec-4] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u1', nombre='Ana', edad=28}, interesesEnComun=[null]}
+2025-11-17 21:05:29.742 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u5
+2025-11-17 21:05:29.764 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u5: [null]
+2025-11-17 21:05:29.779 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u1. Intereses en común: 1 ([null])
+2025-11-17 21:05:29.779 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u1 con 1 intereses en común.
+2025-11-17 21:05:29.786 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u2. Intereses en común: 1 ([null])
+2025-11-17 21:05:29.794 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 1 ([null])
+2025-11-17 21:05:29.799 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 1 ([null])
+2025-11-17 21:05:29.807 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 1 ([null])
+2025-11-17 21:05:29.811 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 1 ([null])
+2025-11-17 21:05:29.818 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 1 ([null])
+2025-11-17 21:05:29.824 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t1. Intereses en común: 0 ([])
+2025-11-17 21:05:29.829 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t2. Intereses en común: 0 ([])
+2025-11-17 21:05:29.835 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t3. Intereses en común: 0 ([])
+2025-11-17 21:05:29.840 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t4. Intereses en común: 0 ([])
+2025-11-17 21:05:29.845 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t5. Intereses en común: 0 ([])
+2025-11-17 21:05:29.851 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t6. Intereses en común: 0 ([])
+2025-11-17 21:05:29.858 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t7. Intereses en común: 0 ([])
+2025-11-17 21:05:29.866 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t8. Intereses en común: 0 ([])
+2025-11-17 21:05:29.866 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u1', nombre='Ana', edad=28}, interesesEnComun=[null]}
+2025-11-17 21:05:42.237 [http-nio-8080-exec-6] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-17 21:05:42.260 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: [null]
+2025-11-17 21:05:42.275 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 1 ([null])
+2025-11-17 21:05:42.275 [http-nio-8080-exec-6] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 1 intereses en común.
+2025-11-17 21:05:42.282 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 1 ([null])
+2025-11-17 21:05:42.288 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 1 ([null])
+2025-11-17 21:05:42.294 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 1 ([null])
+2025-11-17 21:05:42.301 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 1 ([null])
+2025-11-17 21:05:42.305 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 1 ([null])
+2025-11-17 21:05:42.310 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t1. Intereses en común: 0 ([])
+2025-11-17 21:05:42.315 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t2. Intereses en común: 0 ([])
+2025-11-17 21:05:42.320 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t3. Intereses en común: 0 ([])
+2025-11-17 21:05:42.326 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t4. Intereses en común: 0 ([])
+2025-11-17 21:05:42.331 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t5. Intereses en común: 0 ([])
+2025-11-17 21:05:42.336 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t6. Intereses en común: 0 ([])
+2025-11-17 21:05:42.344 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t7. Intereses en común: 0 ([])
+2025-11-17 21:05:42.349 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: t8. Intereses en común: 0 ([])
+2025-11-17 21:05:42.349 [http-nio-8080-exec-6] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel', edad=41}, interesesEnComun=[null]}
+2025-11-17 21:19:18.234 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 29028 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-17 21:19:18.234 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-17 21:19:18.234 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-17 21:19:18.639 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 0.432 seconds (process running for 875.088)
+2025-11-18 00:21:28.134 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 14848 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-18 00:21:28.141 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-18 00:21:28.142 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-18 00:21:30.327 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 2.489 seconds (process running for 3.583)
+2025-11-18 00:21:36.141 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-18 00:21:36.651 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: []
+2025-11-18 00:21:36.714 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-18 00:21:36.714 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 0 intereses en común.
+2025-11-18 00:21:36.725 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 00:21:36.738 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 00:21:36.749 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 00:21:36.758 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 00:21:36.760 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel', edad=41}, interesesEnComun=[]}
+2025-11-18 00:21:43.576 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u3
+2025-11-18 00:21:43.616 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u3: []
+2025-11-18 00:21:43.640 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 00:21:43.641 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u6 con 0 intereses en común.
+2025-11-18 00:21:43.650 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 00:21:43.658 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 00:21:43.667 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 00:21:43.675 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 0 ([])
+2025-11-18 00:21:43.682 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 00:21:43.683 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u6', nombre='Fabian', edad=29}, interesesEnComun=[]}
+2025-11-18 00:23:16.224 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-18 00:23:16.254 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: []
+2025-11-18 00:23:16.273 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-18 00:23:16.273 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 0 intereses en común.
+2025-11-18 00:23:16.281 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 00:23:16.290 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 00:23:16.297 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 00:23:16.304 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 00:23:16.304 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel', edad=41}, interesesEnComun=[]}
+2025-11-18 00:23:18.021 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-18 00:23:18.044 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: []
+2025-11-18 00:23:18.062 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-18 00:23:18.062 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 0 intereses en común.
+2025-11-18 00:23:18.068 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 00:23:18.076 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 00:23:18.084 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 00:23:18.092 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 00:23:18.092 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel', edad=41}, interesesEnComun=[]}
+2025-11-18 00:55:00.724 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 30072 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-18 00:55:00.730 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-18 00:55:00.731 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-18 00:55:02.518 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 2.037 seconds (process running for 2.799)
+2025-11-18 00:56:27.674 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-18 00:56:28.191 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: []
+2025-11-18 00:56:28.238 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-18 00:56:28.239 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 0 intereses en común.
+2025-11-18 00:56:28.256 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 00:56:28.273 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 00:56:28.288 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 00:56:28.302 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 00:56:28.303 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel', edad=41}, interesesEnComun=[]}
+2025-11-18 00:56:53.042 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u2
+2025-11-18 00:56:53.082 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u2: []
+2025-11-18 00:56:53.100 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 00:56:53.101 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u7 con 0 intereses en común.
+2025-11-18 00:56:53.109 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 00:56:53.117 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 00:56:53.125 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 00:56:53.133 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 00:56:53.140 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 00:56:53.148 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 0 ([])
+2025-11-18 00:56:53.148 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u7', nombre='Gabi', edad=null}, interesesEnComun=[]}
+2025-11-18 01:31:35.324 [http-nio-8080-exec-4] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u2
+2025-11-18 01:31:35.358 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u2: []
+2025-11-18 01:31:35.385 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:31:35.385 [http-nio-8080-exec-4] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u7 con 0 intereses en común.
+2025-11-18 01:31:35.394 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 01:31:35.402 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:31:35.409 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:31:35.418 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:31:35.424 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 01:31:35.434 [http-nio-8080-exec-4] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 0 ([])
+2025-11-18 01:31:35.434 [http-nio-8080-exec-4] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u7', nombre='Gabi', edad=null}, interesesEnComun=[]}
+2025-11-18 01:31:41.176 [http-nio-8080-exec-6] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-18 01:31:41.204 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: []
+2025-11-18 01:31:41.220 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-18 01:31:41.220 [http-nio-8080-exec-6] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 0 intereses en común.
+2025-11-18 01:31:41.227 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 01:31:41.234 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:31:41.240 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:31:41.247 [http-nio-8080-exec-6] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 01:31:41.248 [http-nio-8080-exec-6] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel', edad=41}, interesesEnComun=[]}
+2025-11-18 01:31:45.247 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u2
+2025-11-18 01:31:45.275 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u2: []
+2025-11-18 01:31:45.293 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:31:45.293 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u7 con 0 intereses en común.
+2025-11-18 01:31:45.300 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 01:31:45.306 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:31:45.314 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:31:45.322 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:31:45.328 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 01:31:45.334 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 0 ([])
+2025-11-18 01:31:45.334 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u7', nombre='Gabi', edad=null}, interesesEnComun=[]}
+2025-11-18 01:31:49.455 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u3
+2025-11-18 01:31:49.480 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u3: []
+2025-11-18 01:31:49.495 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:31:49.496 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u7 con 0 intereses en común.
+2025-11-18 01:31:49.503 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:31:49.509 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:31:49.517 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:31:49.524 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 01:31:49.530 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 0 ([])
+2025-11-18 01:31:49.531 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u7', nombre='Gabi', edad=null}, interesesEnComun=[]}
+2025-11-18 01:31:53.994 [http-nio-8080-exec-8] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u4
+2025-11-18 01:31:54.032 [http-nio-8080-exec-8] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u4: []
+2025-11-18 01:31:54.056 [http-nio-8080-exec-8] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:31:54.057 [http-nio-8080-exec-8] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u7 con 0 intereses en común.
+2025-11-18 01:31:54.063 [http-nio-8080-exec-8] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u1. Intereses en común: 0 ([])
+2025-11-18 01:31:54.069 [http-nio-8080-exec-8] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:31:54.075 [http-nio-8080-exec-8] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:31:54.083 [http-nio-8080-exec-8] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 01:31:54.087 [http-nio-8080-exec-8] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 0 ([])
+2025-11-18 01:31:54.088 [http-nio-8080-exec-8] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u7', nombre='Gabi', edad=null}, interesesEnComun=[]}
+2025-11-18 01:38:27.246 [http-nio-8080-exec-10] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u4
+2025-11-18 01:38:27.306 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u4: []
+2025-11-18 01:38:27.324 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u1. Intereses en común: 0 ([])
+2025-11-18 01:38:27.324 [http-nio-8080-exec-10] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u1 con 0 intereses en común.
+2025-11-18 01:38:27.330 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 01:38:27.336 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:38:27.342 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:38:27.347 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:38:27.353 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 01:38:27.361 [http-nio-8080-exec-10] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 0 ([])
+2025-11-18 01:38:27.361 [http-nio-8080-exec-10] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u1', nombre='Ana Perez', edad=28}, interesesEnComun=[]}
+2025-11-18 01:38:28.844 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u4
+2025-11-18 01:38:28.863 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u4: []
+2025-11-18 01:38:28.869 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u1. Intereses en común: 0 ([])
+2025-11-18 01:38:28.875 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u1 con 0 intereses en común.
+2025-11-18 01:38:28.881 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 01:38:28.887 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:38:28.899 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:38:28.909 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:38:28.912 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 01:38:28.924 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 0 ([])
+2025-11-18 01:38:28.924 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u1', nombre='Ana Perez', edad=28}, interesesEnComun=[]}
+2025-11-18 01:38:50.213 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u40
+2025-11-18 01:39:00.930 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u10
+2025-11-18 01:39:00.949 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u10: []
+2025-11-18 01:39:00.961 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u2. Intereses en común: 0 ([])
+2025-11-18 01:39:00.961 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u2 con 0 intereses en común.
+2025-11-18 01:39:00.966 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u3. Intereses en común: 0 ([])
+2025-11-18 01:39:00.973 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-18 01:39:00.978 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 01:39:00.984 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:39:00.990 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:39:00.995 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:39:00.995 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u2', nombre='Bruno Lopez', edad=35}, interesesEnComun=[]}
+2025-11-18 01:43:46.386 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 28044 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-18 01:43:46.391 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-18 01:43:46.392 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-18 01:43:48.241 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 2.085 seconds (process running for 2.8)
+2025-11-18 01:43:53.138 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u10
+2025-11-18 01:43:53.543 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u10: []
+2025-11-18 01:43:53.587 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u2. Intereses en común: 0 ([])
+2025-11-18 01:43:53.587 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u2 con 0 intereses en común.
+2025-11-18 01:43:53.599 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u3. Intereses en común: 0 ([])
+2025-11-18 01:43:53.617 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-18 01:43:53.629 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 01:43:53.641 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:43:53.652 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:43:53.663 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:43:53.664 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u2', nombre='Bruno Lopez', edad=35}, interesesEnComun=[]}
+2025-11-18 01:43:57.124 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-18 01:43:57.164 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: []
+2025-11-18 01:43:57.188 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-18 01:43:57.188 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 0 intereses en común.
+2025-11-18 01:43:57.195 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 01:43:57.202 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:43:57.209 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:43:57.216 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:43:57.224 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 01:43:57.225 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel Romero', edad=41}, interesesEnComun=[]}
+2025-11-18 01:43:58.191 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-18 01:43:58.217 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: []
+2025-11-18 01:43:58.235 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-18 01:43:58.235 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 0 intereses en común.
+2025-11-18 01:43:58.242 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 01:43:58.248 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:43:58.256 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:43:58.264 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:43:58.271 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 01:43:58.271 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel Romero', edad=41}, interesesEnComun=[]}
+2025-11-18 01:44:56.362 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 22448 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-18 01:44:56.367 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-18 01:44:56.368 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-18 01:44:57.686 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 1.538 seconds (process running for 2.307)
+2025-11-18 01:45:09.415 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-18 01:45:09.642 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: []
+2025-11-18 01:45:09.662 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-18 01:45:09.662 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 0 intereses en común.
+2025-11-18 01:45:09.668 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 01:45:09.673 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:45:09.678 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:45:09.683 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:45:09.688 [http-nio-8080-exec-5] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 01:45:09.689 [http-nio-8080-exec-5] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel Romero', edad=41}, interesesEnComun=[]}
+2025-11-18 01:46:22.829 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 22448 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-18 01:46:22.830 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-18 01:46:22.830 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-18 01:46:23.299 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 0.491 seconds (process running for 87.921)
+2025-11-18 01:46:32.739 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-18 01:46:32.775 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Intereses de u1: []
+2025-11-18 01:46:32.792 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 0 ([])
+2025-11-18 01:46:32.792 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 0 intereses en común.
+2025-11-18 01:46:32.799 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 0 ([])
+2025-11-18 01:46:32.805 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 0 ([])
+2025-11-18 01:46:32.809 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 0 ([])
+2025-11-18 01:46:32.813 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 0 ([])
+2025-11-18 01:46:32.818 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 0 ([])
+2025-11-18 01:46:32.819 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel Romero', edad=41}, interesesEnComun=[]}
+2025-11-18 01:52:08.534 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 27900 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-18 01:52:08.540 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-18 01:52:08.542 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-18 01:52:10.387 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 2.103 seconds (process running for 2.85)
+2025-11-18 01:52:30.192 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u1
+2025-11-18 01:52:30.523 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - Intereses de u1: [Cine, Programacion, Videojuegos, Musica, Senderismo, Cocina]
+2025-11-18 01:52:30.559 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u4. Intereses en común: 3 ([Cine, Programacion, Videojuegos])
+2025-11-18 01:52:30.559 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u4 con 3 intereses en común.
+2025-11-18 01:52:30.568 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 2 ([Senderismo, Cocina])
+2025-11-18 01:52:30.578 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 3 ([Cine, Musica, Senderismo])
+2025-11-18 01:52:30.587 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 1 ([Videojuegos])
+2025-11-18 01:52:30.598 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 3 ([Cine, Musica, Cocina])
+2025-11-18 01:52:30.609 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 1 ([Programacion])
+2025-11-18 01:52:30.610 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u4', nombre='Daniel Romero', edad=41}, interesesEnComun=[Cine, Programacion, Videojuegos]}
+2025-11-18 01:52:37.039 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u2
+2025-11-18 01:52:37.065 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - Intereses de u2: [Cine, Fotografia, Viajes, Deportes, Lectura, Arte, Cocina]
+2025-11-18 01:52:37.083 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u3. Intereses en común: 4 ([Cine, Fotografia, Lectura, Arte])
+2025-11-18 01:52:37.083 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u3 con 4 intereses en común.
+2025-11-18 01:52:37.090 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u5. Intereses en común: 3 ([Fotografia, Viajes, Cocina])
+2025-11-18 01:52:37.106 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 2 ([Cine, Deportes])
+2025-11-18 01:52:37.113 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 1 ([Arte])
+2025-11-18 01:52:37.119 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 4 ([Cine, Deportes, Lectura, Cocina])
+2025-11-18 01:52:37.124 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 2 ([Lectura, Arte])
+2025-11-18 01:52:37.131 [http-nio-8080-exec-7] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 3 ([Viajes, Deportes, Cocina])
+2025-11-18 01:52:37.131 [http-nio-8080-exec-7] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u3', nombre='Carla Fernandez', edad=22}, interesesEnComun=[Cine, Fotografia, Lectura, Arte]}
+2025-11-18 01:52:41.365 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Iniciando recomendación de amigo para el usuario: u3
+2025-11-18 01:52:41.386 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - Intereses de u3: [Cine, Fotografia, Lectura, Arte, Baile, Musica]
+2025-11-18 01:52:41.401 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u2. Intereses en común: 4 ([Cine, Fotografia, Lectura, Arte])
+2025-11-18 01:52:41.403 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Nuevo mejor candidato encontrado: u2 con 4 intereses en común.
+2025-11-18 01:52:41.408 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u6. Intereses en común: 2 ([Cine, Musica])
+2025-11-18 01:52:41.413 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u7. Intereses en común: 2 ([Arte, Baile])
+2025-11-18 01:52:41.420 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u8. Intereses en común: 3 ([Cine, Lectura, Musica])
+2025-11-18 01:52:41.426 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 2 ([Lectura, Arte])
+2025-11-18 01:52:41.431 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 0 ([])
+2025-11-18 01:52:41.431 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u2', nombre='Bruno Lopez', edad=35}, interesesEnComun=[Cine, Fotografia, Lectura, Arte]}
