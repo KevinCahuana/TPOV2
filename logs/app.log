@@ -947,3 +947,114 @@ java.lang.IllegalArgumentException: Records with more than one value cannot be c
 2025-11-18 01:52:41.426 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u9. Intereses en común: 2 ([Lectura, Arte])
 2025-11-18 01:52:41.431 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.GreedyService - [Greedy] Candidato: u10. Intereses en común: 0 ([])
 2025-11-18 01:52:41.431 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.GreedyService - [Greedy] Recomendación final: RecomendacionAmigoDTO{usuarioRecomendado=Usuario{userId='u2', nombre='Bruno Lopez', edad=35}, interesesEnComun=[Cine, Fotografia, Lectura, Arte]}
+2025-11-18 02:14:50.209 [http-nio-8080-exec-10] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Iniciando selección óptima de publicaciones para u1 con un tiempo máximo de 10 minutos.
+2025-11-18 02:14:50.268 [http-nio-8080-exec-10] ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.data.mapping.model.MappingInstantiationException: Failed to instantiate com.example.tpov2.model.Publicacion using constructor public com.example.tpov2.model.Publicacion(java.lang.String,int,int) with arguments null,null,null] with root cause
+java.lang.IllegalArgumentException: Parameter engagementScore must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:172) ~[spring-core-6.1.10.jar:6.1.10]
+	at com.example.tpov2.model.Publicacion_Instantiator_fgpgd2.newInstance(Unknown Source) ~[classes/:?]
+	at org.springframework.data.mapping.model.ClassGeneratingEntityInstantiator$EntityInstantiatorAdapter.createInstance(ClassGeneratingEntityInstantiator.java:276) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.mapping.model.ClassGeneratingEntityInstantiator.createInstance(ClassGeneratingEntityInstantiator.java:98) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.neo4j.core.mapping.DtoInstantiatingConverter.convert(DtoInstantiatingConverter.java:141) ~[spring-data-neo4j-7.3.1.jar:7.3.1]
+	at org.springframework.data.neo4j.repository.query.AbstractNeo4jQuery.lambda$execute$1(AbstractNeo4jQuery.java:100) ~[spring-data-neo4j-7.3.1.jar:7.3.1]
+	at org.springframework.data.repository.query.ResultProcessor$ChainingConverter.convert(ResultProcessor.java:240) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.query.ResultProcessor$ChainingConverter.lambda$and$0(ResultProcessor.java:230) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.query.ResultProcessor$ChainingConverter.convert(ResultProcessor.java:240) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.query.ResultProcessor.processResult(ResultProcessor.java:160) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.neo4j.repository.query.AbstractNeo4jQuery.execute(AbstractNeo4jQuery.java:111) ~[spring-data-neo4j-7.3.1.jar:7.3.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70) ~[spring-data-commons-3.3.1.jar:3.3.1]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:392) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.10.jar:6.1.10]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.1.10.jar:6.1.10]
+	at jdk.proxy3/jdk.proxy3.$Proxy100.findPublicacionesByUserId(Unknown Source) ~[?:?]
+	at com.example.tpov2.service.DinamicaService.seleccionarPublicacionesOptimas(DinamicaService.java:24) ~[classes/:?]
+	at com.example.tpov2.controller.DinamicaController.optimizarContenido(DinamicaController.java:40) ~[classes/:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.10.jar:6.1.10]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.25.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.10.jar:6.1.10]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:904) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) [tomcat-embed-core-10.1.25.jar:10.1.25]
+	at java.base/java.lang.Thread.run(Thread.java:840) [?:?]
+2025-11-18 02:17:36.132 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 26924 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-18 02:17:36.138 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-18 02:17:36.139 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-18 02:17:37.914 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 2.056 seconds (process running for 2.848)
+2025-11-18 02:18:24.744 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Iniciando selección óptima de publicaciones para u1 con un tiempo máximo de 10 minutos.
+2025-11-18 02:18:25.117 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Máximo engagement alcanzable: 120
+2025-11-18 02:18:25.117 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.DinamicaService - [Dinamica] Seleccionada publicación: p2 (Valor: 40, Peso: 2)
+2025-11-18 02:18:25.118 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.DinamicaService - [Dinamica] Seleccionada publicación: p1 (Valor: 80, Peso: 3)
+2025-11-18 02:18:25.118 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Selección finalizada. 2 publicaciones seleccionadas.
+2025-11-18 02:46:37.284 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Starting Tpov2Application using Java 17.0.13 with PID 26924 (C:\Users\keko-rog2\Documents\GitHub\TPOV2\target\classes started by keko-rog2 in C:\Users\keko-rog2\Documents\GitHub\TPOV2)
+2025-11-18 02:46:37.285 [restartedMain] DEBUG com.example.tpov2.Tpov2Application - Running with Spring Boot v3.3.1, Spring v6.1.10
+2025-11-18 02:46:37.285 [restartedMain] INFO  com.example.tpov2.Tpov2Application - No active profile set, falling back to 1 default profile: "default"
+2025-11-18 02:46:37.703 [restartedMain] INFO  com.example.tpov2.Tpov2Application - Started Tpov2Application in 0.447 seconds (process running for 1742.637)
+2025-11-18 02:48:08.471 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Iniciando selección óptima de publicaciones para u1 con un tiempo máximo de 10 minutos.
+2025-11-18 02:48:08.517 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Máximo engagement alcanzable: 120
+2025-11-18 02:48:08.517 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.DinamicaService - [Dinamica] Seleccionada publicación: p2 (Valor: 40, Peso: 2)
+2025-11-18 02:48:08.517 [http-nio-8080-exec-1] DEBUG com.example.tpov2.service.DinamicaService - [Dinamica] Seleccionada publicación: p1 (Valor: 80, Peso: 3)
+2025-11-18 02:48:08.517 [http-nio-8080-exec-1] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Selección finalizada. 2 publicaciones seleccionadas.
+2025-11-18 02:48:15.991 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Iniciando selección óptima de publicaciones para u1 con un tiempo máximo de 100 minutos.
+2025-11-18 02:48:16.006 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Máximo engagement alcanzable: 120
+2025-11-18 02:48:16.007 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.DinamicaService - [Dinamica] Seleccionada publicación: p2 (Valor: 40, Peso: 2)
+2025-11-18 02:48:16.007 [http-nio-8080-exec-2] DEBUG com.example.tpov2.service.DinamicaService - [Dinamica] Seleccionada publicación: p1 (Valor: 80, Peso: 3)
+2025-11-18 02:48:16.007 [http-nio-8080-exec-2] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Selección finalizada. 2 publicaciones seleccionadas.
+2025-11-18 02:48:30.822 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Iniciando selección óptima de publicaciones para u1 con un tiempo máximo de 40 minutos.
+2025-11-18 02:48:30.834 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Máximo engagement alcanzable: 120
+2025-11-18 02:48:30.834 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.DinamicaService - [Dinamica] Seleccionada publicación: p2 (Valor: 40, Peso: 2)
+2025-11-18 02:48:30.834 [http-nio-8080-exec-3] DEBUG com.example.tpov2.service.DinamicaService - [Dinamica] Seleccionada publicación: p1 (Valor: 80, Peso: 3)
+2025-11-18 02:48:30.834 [http-nio-8080-exec-3] INFO  com.example.tpov2.service.DinamicaService - [Dinamica] Selección finalizada. 2 publicaciones seleccionadas.

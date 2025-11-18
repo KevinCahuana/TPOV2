@@ -36,6 +36,7 @@ public interface UsuarioRepository extends Neo4jRepository<Usuario, String> {
     @Query("MATCH (u:Usuario {userId: $userId})-[:TIENE_INTERES]->(i:Interes) RETURN i.nombre")
     Set<String> findInteresesNombresByUserId(@Param("userId") String userId);
 
-    @Query("MATCH (u:Usuario {userId: $userId})-[:CREO]->(p:Publicacion) RETURN p")
+    @Query("MATCH (u:Usuario {userId: $userId})-[:CREO]->(p:Publicacion) " +
+           "RETURN p.postId AS postId, p.engagementScore AS engagementScore, p.tiempoLectura AS tiempoLectura")
     List<Publicacion> findPublicacionesByUserId(@Param("userId") String userId);
 }

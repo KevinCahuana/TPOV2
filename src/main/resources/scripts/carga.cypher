@@ -38,14 +38,37 @@ MERGE (:Interes {nombre: 'Jardineria'});
 MERGE (:Interes {nombre: 'Baile'});
 
 // ======================================================================
-// PASO 2: Crear Nodos de Publicaciones
+// PASO 2: Crear Nodos de Publicaciones (26 en total)
 // ======================================================================
+// Publicaciones originales
 MERGE (:Publicacion {postId: 'p1', engagementScore: 80, tiempoLectura: 3});
 MERGE (:Publicacion {postId: 'p2', engagementScore: 40, tiempoLectura: 2});
 MERGE (:Publicacion {postId: 'p3', engagementScore: 100, tiempoLectura: 4});
 MERGE (:Publicacion {postId: 'p4', engagementScore: 120, tiempoLectura: 5});
 MERGE (:Publicacion {postId: 'p5', engagementScore: 30, tiempoLectura: 1});
 MERGE (:Publicacion {postId: 'p6', engagementScore: 75, tiempoLectura: 3});
+// 20 nuevas publicaciones
+MERGE (:Publicacion {postId: 'p7', engagementScore: 90, tiempoLectura: 4});
+MERGE (:Publicacion {postId: 'p8', engagementScore: 50, tiempoLectura: 2});
+MERGE (:Publicacion {postId: 'p9', engagementScore: 110, tiempoLectura: 5});
+MERGE (:Publicacion {postId: 'p10', engagementScore: 25, tiempoLectura: 1});
+MERGE (:Publicacion {postId: 'p11', engagementScore: 85, tiempoLectura: 3});
+MERGE (:Publicacion {postId: 'p12', engagementScore: 65, tiempoLectura: 12});
+MERGE (:Publicacion {postId: 'p13', engagementScore: 130, tiempoLectura: 6});
+MERGE (:Publicacion {postId: 'p14', engagementScore: 45, tiempoLectura: 2});
+MERGE (:Publicacion {postId: 'p15', engagementScore: 95, tiempoLectura: 14});
+MERGE (:Publicacion {postId: 'p16', engagementScore: 55, tiempoLectura: 3});
+MERGE (:Publicacion {postId: 'p17', engagementScore: 150, tiempoLectura: 7});
+MERGE (:Publicacion {postId: 'p18', engagementScore: 20, tiempoLectura: 1});
+MERGE (:Publicacion {postId: 'p19', engagementScore: 70, tiempoLectura: 3});
+MERGE (:Publicacion {postId: 'p20', engagementScore: 105, tiempoLectura: 5});
+MERGE (:Publicacion {postId: 'p21', engagementScore: 60, tiempoLectura: 2});
+MERGE (:Publicacion {postId: 'p22', engagementScore: 140, tiempoLectura: 6});
+MERGE (:Publicacion {postId: 'p23', engagementScore: 35, tiempoLectura: 11});
+MERGE (:Publicacion {postId: 'p24', engagementScore: 88, tiempoLectura: 4});
+MERGE (:Publicacion {postId: 'p25', engagementScore: 98, tiempoLectura: 24});
+MERGE (:Publicacion {postId: 'p26', engagementScore: 115, tiempoLectura: 15});
+
 
 // ======================================================================
 // PASO 3: Asignar Relaciones
@@ -83,12 +106,22 @@ MATCH (i:Interes {nombre: interesNombre})
 MERGE (u)-[:TIENE_INTERES]->(i);
 
 // --- Relaciones de Publicaciones (CREO) ---
-MATCH (u:Usuario {userId: 'u1'}), (p:Publicacion {postId: 'p1'}) MERGE (u)-[:CREO]->(p);
-MATCH (u:Usuario {userId: 'u1'}), (p:Publicacion {postId: 'p2'}) MERGE (u)-[:CREO]->(p);
-MATCH (u:Usuario {userId: 'u2'}), (p:Publicacion {postId: 'p3'}) MERGE (u)-[:CREO]->(p);
-MATCH (u:Usuario {userId: 'u3'}), (p:Publicacion {postId: 'p4'}) MERGE (u)-[:CREO]->(p);
-MATCH (u:Usuario {userId: 'u3'}), (p:Publicacion {postId: 'p5'}) MERGE (u)-[:CREO]->(p);
-MATCH (u:Usuario {userId: 'u4'}), (p:Publicacion {postId: 'p6'}) MERGE (u)-[:CREO]->(p);
+UNWIND [
+    {userId: 'u1', postIds: ['p1', 'p2']},
+    {userId: 'u2', postIds: ['p3']},
+    {userId: 'u3', postIds: ['p4', 'p5']},
+    {userId: 'u4', postIds: ['p6']},
+    {userId: 'u5', postIds: ['p7', 'p8', 'p9']},
+    {userId: 'u6', postIds: ['p10', 'p11', 'p12', 'p13']},
+    {userId: 'u7', postIds: ['p14', 'p15']},
+    {userId: 'u8', postIds: ['p16', 'p17', 'p18', 'p19']},
+    {userId: 'u9', postIds: ['p20', 'p21', 'p22']},
+    {userId: 'u10', postIds: ['p23', 'p24', 'p25', 'p26']}
+] AS userPubs
+MATCH (u:Usuario {userId: userPubs.userId})
+UNWIND userPubs.postIds AS postId
+MATCH (p:Publicacion {postId: postId})
+MERGE (u)-[:CREO]->(p);
 
 // --- Relaciones de Vivienda (VIVE_EN) ---
 MATCH (u:Usuario {userId: 'u1'}), (c:Ciudad {nombre: 'Buenos Aires'}) MERGE (u)-[:VIVE_EN]->(c);
